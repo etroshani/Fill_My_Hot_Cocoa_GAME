@@ -1,7 +1,7 @@
 # Fill My Hot Cocoa!
 Fill My Hot Cocoa is a game built in Python using the Pygame module. It consists of lively music, fun gameplay, and a feel-good mood. A player has the challenge of catching as many marshmallows as possible, all while avoiding the bombs in order to beat the game! This is an indie game created as a personal project to further develop my skills as a programmer. Initiated out of a desire to delve into new programming concepts and test my abilities, this project has been a proving ground for both learning and creativity. Through the challenges faced and the solutions devised, I've not only navigated unfamiliar territories but also honed my craft, adding a wealth of knowledge and techniques to my development arsenal. In the end, I can confidently say that I have mastered new aspects of game creation and programming, and will continue to undertake new challenging projects in the future.
 
-Below are some brief descriptions on the elements of my code files:
+Below is a brief description on the elements of my code files:
 # main.py: The Core Game Loop and Mechanics
 main.py serves as the heart of the game, orchestrating the game's core loop, event handling, and rendering processes. It handles graphical rendering, event management, and sound playback. Key functionalities include dynamic background scrolling, sprite creation and management, level difficulty, collision detection, and score tracking, event handling, and more. The game loop follows a structured approach to update game states, process user inputs, and render updates to the display, ensuring smooth and responsive gameplay.
 ## Dynamic Background Scrolling: 
