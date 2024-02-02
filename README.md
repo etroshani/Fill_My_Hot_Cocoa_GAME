@@ -3,7 +3,7 @@ Fill My Hot Cocoa is a game built in Python using the Pygame module. It consists
 
 Below is a brief description on the elements of my code files:
 # main.py: The Core Game Loop and Mechanics
-main.py serves as the heart of the game, orchestrating the game's core loop, event handling, and rendering processes. It handles graphical rendering, event management, and sound playback. Key functionalities include dynamic background scrolling, sprite creation and management, level difficulty, collision detection, and score tracking, event handling, and more. The game loop follows a structured approach to update game states, process user inputs, and render updates to the display, ensuring smooth and responsive gameplay.
+main.py serves as the heart of the game, orchestrating the game's core loop, event handling, and rendering processes. It handles graphical rendering, event management, and sound playback. Key functionalities include dynamic background scrolling, sprite creation and management, level difficulty, collision detection, score tracking, event handling, and more. The game loop follows a structured approach to update game states, process user inputs, and render updates to the screen.
 ## Dynamic Background Scrolling: 
 Implements an efficient method to create an endless vertical scrolling effect to enhance the game's visuals.
 ## Sprite Management: 
