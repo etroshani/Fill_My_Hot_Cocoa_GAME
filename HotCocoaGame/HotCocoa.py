@@ -135,7 +135,7 @@ while exit:
         canvas.blit(bg, (-15, position))
         i += 1
     # FRAME FOR SCROLLING 
-    scroll += 0.5
+    scroll += 0.2
 
     # RESET THE SCROLL FRAME 
     if abs(scroll) > bg.get_height(): 
@@ -254,9 +254,6 @@ while exit:
                     spriteCreationTime = currentTime
                     probability = random.random()
                     create_object_sprites(cocoaScore, probability)
-        
-                # Handle level updates
-                #handle_levels(cocoaScore)
 
                 # Update based on the level
                 for sprite in objectSpriteList:
@@ -306,6 +303,7 @@ while exit:
         top4 = scores(name4, score4, 75, (top3.y_pos + top3.height + 10), "#F6C6BD") 
         name5, score5 = df["NAME"][4], df["SCORES"][4] 
         top5 = scores(name5, score5, 75, (top4.y_pos + top4.height + 10), "#F6C6BD") 
+        
         #TOP 5 display
         top1.draw()
         top2.draw()
