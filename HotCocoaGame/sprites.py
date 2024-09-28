@@ -29,14 +29,14 @@ class Sprite(pg.sprite.Sprite):
         # MOVEMENT VARIABLES
         self.velocity_x = 0
         self.acceleration_x = 0
-        self.max_speed = 5
-        self.friction = 0.95
+        self.max_speed = 3
+        self.friction = 0.92
 
     def moveRight(self):
-        self.acceleration_x = 0.5
+        self.acceleration_x = 0.1
 
     def moveLeft(self):
-        self.acceleration_x = -0.5
+        self.acceleration_x = -0.1
 
     def update(self):
         # Apply acceleration to velocity
@@ -76,6 +76,7 @@ class objectsSprite(pg.sprite.Sprite):
         # Positioning the sprite
         self.rect.x = x
         self.rect.y = y
+        self.float_y = float(self.rect.y)      # Float position for smooth movement
 
         # Setting the type
         self.type = type
@@ -89,25 +90,38 @@ class objectsSprite(pg.sprite.Sprite):
     def update_based_on_level(self, score):
         if score < 30:
             if self.movement_type == 'straight':
-                self.rect.move_ip(0, 4)  # Adjust the speed as necessary
+                self.float_y += 0.5  # Vertical movement
+                self.rect.y = int(self.float_y)
 
         # For sinusoidal movement
         if 30 <= score < 50:
             if self.movement_type == 'sinus':
+
+                self.float_y += 0.85  # Vertical movement
+                self.rect.y = int(self.float_y)
+                """ 
                 frequency = 2
-                amplitude = 3
-                self.rect.y += 4  # Vertical movement
+                amplitude = 1.2
                 self.rect.x += int(amplitude * math.sin(frequency * (3 * time.time()) + self.phase_offset))
+                """
             else:
-                self.rect.move_ip(0, 4)  # Adjust the speed as necessary
+                self.float_y += 0.85  # Vertical movement
+                self.rect.y = int(self.float_y)
 
         # For a more complex sinusoidal movement
         if 50 <= score <= 1000:
-            frequency = 2
-            amplitude = 3
             if self.movement_type == 'sinus2':
-                self.rect.y += 4  # Increased vertical movement for higher level
+                self.float_y += 1  # Vertical movement
+                self.rect.y = int(self.float_y)
+
+                """
+                frequency = 2
+                amplitude = 1.2
                 self.rect.x += int(amplitude * math.sin(frequency * (4 * time.time()) + self.phase_offset))
+                """
             else:
-                self.rect.y += 4  # Vertical movement
-                self.rect.x += int(amplitude * math.sin(frequency * (3 * time.time()) + self.phase_offset))
+                self.float_y += 1  # Vertical movement
+                self.rect.y = int(self.float_y)
+
+                
+                #self.rect.x += int(amplitude * math.sin(frequency * (3 * time.time()) + self.phase_offset))
